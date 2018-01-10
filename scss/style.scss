@@ -1,0 +1,227 @@
+@import "normalize";
+@import "layout";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+
+
+body{
+	font: 600 26px/1 'Open Sans', sans-serif;
+
+}
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 1200px;
+}
+
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+body {
+	background: grey url('../img/1.jpg') 50% 0;
+}
+.ba-cards {
+	padding-top: 120px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	img {
+		display: block;
+		max-height: 100%;
+	}
+}
+.ba-card {
+	background-color: #FFF;
+	border-radius: 20px;
+	display: flex;
+	justify-content: stretched;
+	align-items: stretched;
+	padding: 10px 0;
+	z-index: 1;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	transition: transform 1.2s ease-in-out;
+
+	&__cont {
+		position: relative;
+		perspective: 500px;
+		width: 150px;
+		height: 220px;
+		margin: 10px;
+
+	}
+
+	&__back {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		transition: transform 1.2s ease-in-out;
+		background-size: cover;
+		border-radius: 20px;
+		border: 3px solid #fff;
+		background: grey url('../img/fr.jpg') 50% no-repeat;
+		transform: rotateY(-180deg);
+
+	}
+
+	&__side {
+		width: 20%;
+		text-align: center;
+		h3 {
+			margin: 0;
+		}
+	}
+
+
+	&__side--hero {
+		font-size: 22px;
+		h3 {
+			margin: 0 0 5px;
+		}
+	}
+	&__center {
+		width: 60%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		position: relative;
+	}
+
+	&__center-part {
+		width: 40%;
+		text-align: center;
+		position: relative;
+		svg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+		}
+	}
+	&____center-part-hero {
+		width: 100%;
+		text-align: center;
+
+	}
+
+}
+
+.rotated {
+	transform: rotate(180deg);
+
+}
+
+.ba-card__cont {
+	position: relative;
+	perspective: 500px;
+
+	&:hover{
+		.ba-card{
+			transform: rotateY(180deg);
+		}
+		.ba-card__back{
+			transform: rotateY(0);
+		}
+	}
+
+}
+
+.pos-abs-b10,
+.pos-abs-t10,
+.pos-abs-t,
+.pos-abs-b,
+.pos-abs-c {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.pos-abs-t {
+	top: 32%;
+}
+
+
+.pos-abs-c {
+	top: 0;
+	bottom: 0;
+}
+
+.pos-abs-b10 {
+	bottom: 25%;
+	transform: rotate(180deg);
+}
+.pos-abs-t10 {
+	top: 25%;
+}
+
+.ba-h10 {
+	letter-spacing: -0.12em;
+}
+
+.ba-card__cont--red {
+	color: red;
+
+	svg {
+		fill: red;
+	}
+}
